@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirSupply - HVAC & Mechanical Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #ff6b00;
+            --accent-light: #ff983d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAZABkAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+qaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACii极简主义灰色背景');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .section-title.center {
+            text-align: center;
+        }
+
+        .section-title.center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .feature-box {
+            padding: 30px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--accent);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-section {
+            background-color: var(--primary);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+        }
+
+        .btn-primary:hover {
+            background-color: #e55a00;
+            border-color: #e55a00;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-primary {
+            border-color: white;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 15px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stats-text {
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .navbar-brand span {
+            color: var(--accent);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .card-title {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .quote-form {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-list i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .customer-review-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .news-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .review-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .news-bullet {
+            color: var(--accent);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        /* Smartphone Solutions Section */
+        .smartphone-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .smartphone-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #3498db;
+            margin-bottom: 30px;
+        }
+
+        .smartphone-card:nth-child(2) {
+            border-top-color: #ff6b00;
+        }
+
+        .smartphone-card:nth-child(3) {
+            border-top-color: #2ecc71;
+        }
+
+        .smartphone-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .smartphone-icon {
+            text-align: center;
+            padding: 30px 20px 20px;
+            background: linear-gradient(135deg, #3498db15, #3498db05);
+        }
+
+        .smartphone-icon i {
+            font-size: 3rem;
+            color: #3498db;
+        }
+
+        .smartphone-card:nth-child(2) .smartphone-icon i {
+            color: #ff6b00;
+        }
+
+        .smartphone-card:nth-child(3) .smartphone-icon i {
+            color: #2ecc71;
+        }
+
+        .smartphone-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .smartphone-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .smartphone-title span {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+        .smartphone-card:nth-child(2) .smartphone-title span {
+            background: linear-gradient(135deg, #ff6b00, #e55a00);
+        }
+
+        .smartphone-card:nth-child(3) .smartphone-title span {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .smartphone-description {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .smartphone-features {
+            margin-top: auto;
+        }
+
+        .smartphone-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .smartphone-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f1f1;
+            display: flex;
+            align-items: center;
+        }
+
+        .smartphone-features li:last-child {
+            border-bottom: none;
+        }
+
+        .smartphone-features i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        .smartphone-card:nth-child(2) .smartphone-features i {
+            color: #ff6b00;
+        }
+
+        .smartphone-card:nth-child(3) .smartphone-features i {
+            color: #2ecc71;
+        }
+
+        .smartphone-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+            color: white;
+        }
+
+        .download-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Customer Service Section */
+        .customer-service-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #ff6b00;
+        }
+
+        .service-card:nth-child(2) {
+            border-left-color: #3498db;
+        }
+
+        .service-card:nth-child(3) {
+            border-left-color: #2ecc71;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card-header {
+            background: linear-gradient(135deg, #ff6b00, #e55a00);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .service-card:nth-child(2) .service-card-header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        .service-card:nth-child(3) .service-card-header {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .service-card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .service-card-body {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 107, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .service-icon i {
+            font-size: 1.5rem;
+            color: #ff6b00;
+        }
+
+        .service-card:nth-child(2) .service-icon {
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .service-card:nth-child(2) .service-icon i {
+            color: #3498db;
+        }
+
+        .service-card:nth-child(3) .service-icon {
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .service-card:nth-child(3) .service-icon i {
+            color: #2ecc71;
+        }
+
+        .service-feature-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .service-feature-content p {
+            color: #7f8c8d;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .service-card-footer {
+            padding: 20px;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-info li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #ff6b00;
+        }
+
+        .contact-info a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ff6b00;
+        }
+
+        .service-hours {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .service-hours h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .service-hours p {
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+
+            .smartphone-grid,
+            .service-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .smartphone-section,
+            .customer-service-section {
+                padding: 60px 0;
+            }
+
+            .smartphone-grid,
+            .service-container {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .smartphone-section,
+            .customer-service-section {
+                padding: 50px 0;
+            }
+
+            .smartphone-content,
+            .service-card-body {
+                padding: 20px;
+            }
+
+            .smartphone-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Footer Styles */
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg, #1a2a3a 0%, #0d1723 100%);
+            color: white;
+            padding: 70px 0 0;
+            /* Removed bottom padding */
+            margin-top: auto;
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            /* Full viewport width */
+            margin-left: calc(-50vw + 50%);
+            /* Remove side space */
+            margin-right: calc(-50vw + 50%);
+            /* Remove side space */
+            left: 0;
+            right: 0;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #3498db, var(--accent));
+            z-index: 1;
+        }
+
+        .footer .container {
+            max-width: 100%;
+            /* Remove container constraints */
+            padding: 0 15px;
+            /* Add minimal side padding */
+        }
+
+        .footer h5 {
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+            color: white;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #3498db);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .footer-col:hover h5::after {
+            width: 80px;
+        }
+
+        .footer p {
+            color: #b0b7c3;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-links li:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-links a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-links a:hover::before {
+            width: 100%;
+        }
+
+        .footer-links i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-links a:hover i {
+            transform: rotate(90deg);
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: flex-start;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info li:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            background: rgba(255, 107, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info li:hover i {
+            background: var(--accent);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .contact-info span {
+            color: #b0b7c3;
+            line-height: 1.5;
+            flex: 1;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info li:hover span {
+            color: white;
+        }
+
+        .footer-newsletter {
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.15) 0%, rgba(52, 152, 219, 0.1) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            margin: 0 10px;
+            /* Reduced side margin */
+        }
+
+        .footer-newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, var(--accent));
+        }
+
+        .footer-newsletter h5 {
+            color: white;
+            margin-bottom: 15px;
+            padding-bottom: 0;
+        }
+
+        .footer-newsletter h5::after {
+            display: none;
+        }
+
+        .footer-newsletter p {
+            margin-bottom: 20px;
+            color: #c8d0e0;
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .newsletter-input {
+            flex-grow: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-input::placeholder {
+            color: #a0a9b8;
+        }
+
+        .newsletter-input:focus {
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.3);
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(135deg, var(--accent), #e55a00);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .newsletter-btn:hover {
+            background: linear-gradient(135deg, #e55a00, var(--accent));
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.4);
+        }
+
+        .newsletter-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .newsletter-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.09);
+            color: #b0b7c3;
+            margin-right: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent), #3498db);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .social-links a:hover::before {
+            opacity: 1;
+        }
+
+        .social-links a:nth-child(1):hover {
+            background: #3b5998;
+        }
+
+        .social-links a:nth-child(2):hover {
+            background: #1da1f2;
+        }
+
+        .social-links a:nth-child(3):hover {
+            background: #e4405f;
+        }
+
+        .social-links a:nth-child(4):hover {
+            background: #0077b5;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px 0;
+            /* Reduced padding */
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+            color: #8f9aac;
+            font-size: 0.9rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .payment-methods i {
+            font-size: 1.8rem;
+            margin: 0 10px;
+            color: #8f9aac;
+            transition: all 0.3s ease;
+        }
+
+        .payment-methods i:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #e55a00);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.4);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: linear-gradient(135deg, #e55a00, var(--accent));
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .footer {
+                padding: 50px 0 0;
+                /* Removed bottom padding */
+            }
+
+            .footer-col {
+                margin-bottom: 40px;
+            }
+
+            .footer-newsletter {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                text-align: center;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+
+            .footer h5::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-col:hover h5::after {
+                width: 50px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-input {
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-btn {
+                border-radius: 8px;
+                padding: 15px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .contact-info li {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contact-info i {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .contact-info span {
+                width: 100%;
+            }
+
+            .footer-newsletter {
+                margin: 0 5px;
+                /* Further reduced side margin */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer {
+                padding: 40px 0 0;
+                /* Removed bottom padding */
+            }
+
+            .footer-newsletter {
+                padding: 20px;
+            }
+
+            .footer-bottom .row>div {
+                margin-bottom: 15px;
+            }
+
+            .footer-bottom {
+                padding: 20px 0;
+                /* Reduced padding */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-hurricane"></i> Air<span>Supply</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#advantages">Advantages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#quote" class="btn btn-primary ms-3 d-none d-lg-block">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-4">Professional HVAC & Mechanical Services</h1>
+                    <p class="lead mb-4">We provide top-quality heating, ventilation, and air conditioning solutions for
+                        residential and commercial properties.</p>
+                    <div class="d-flex justify-content-center flex-wrap gap-3">
+                        <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section (Based on mani1.jpg) -->
+    <section id="advantages" class="advantages-section">
+        <div class="container">
+            <h2 class="section-title center">Advantages of Ductless Cooling and Heating Systems</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <h3>Energy Efficiency</h3>
+                        <p>Ductless systems minimize energy loss, reducing your utility bills and environmental impact.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-volume-mute"></i>
+                        </div>
+                        <h3>Quiet Operation</h3>
+                        <p>Advanced technology ensures whisper-quiet performance for undisturbed comfort.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h3>Waste Solution</h3>
+                        <p>Our systems are designed with environmental responsibility in mind, reducing waste.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-house-check"></i>
+                        </div>
+                        <h3>Heating & Water</h3>
+                        <p>Integrated solutions for both heating and hot water needs in one efficient system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-5">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Time for a New System?</h3>
+                    <p>If your HVAC system is more than 10 years old or needing frequent repairs, it might be time to
+                        consider an upgrade to a modern, efficient ductless system.</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <i class="bi bi-telephone fs-3 me-3 text-primary"></i>
+                        <div>
+                            <h4 class="mb-0">Call Us Today</h4>
+                            <p class="mb-0">Find a greater organic solution for your home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light p-4 rounded">
+                        <h4 class="mb-4">Repairs & Services</h4>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle"></i> HVAC system diagnostics</li>
+                            <li><i class="bi bi-check-circle"></i> Cooling and heating repairs</li>
+                            <li><i class="bi bi-check-circle"></i> Preventative maintenance</li>
+                            <li><i class="bi bi-check-circle"></i> System installation</li>
+                            <li><i class="bi bi-check-circle"></i> 24/7 emergency service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Based on mani2.jpg) -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title center">Featured Services</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h3>Quick Operations</h3>
+                        <p>But we can use simple-based customization options with a custom approach tailored to your
+                            specific needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="bi bi-collection"></i>
+                        </div>
+                        <h3>Wide Selection</h3>
+                        <p>We offer a wide range of single-scale hardware and multi-purpose platforms to meet diverse
+                            requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h3>Energy Efficiency</h3>
+                        <p>Because the application uses efficient and transparent electrical and battery components for
+                            optimal performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Air Supply Advantage</h3>
+                    <div class="accordion" id="servicesAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    Energy Efficiency
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    For example, we have built an electric vehicle to meet customer demands, including
+                                    customers' needs, and our customers are excited about their own business.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    Quick Operations
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    Our service capabilities are also limited by the vendor's requirements, but we
+                                    strive to provide the fastest response times.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree">
+                                    Wide Selection
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    We offer a wide range of single-scale hardware and multi-purpose platforms to suit
+                                    various applications.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div id="quote" class="quote-form">
+                        <h4 class="mb-4">Request a Quote</h4>
+                        <p class="mb-4">We utilize the latest tools and technologies including WebKit Tools, Mobile
+                            Apps, Networking Solutions, and more.</p>
+
+                        <h5 class="mt-4">We Provide:</h5>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <ul class="service-list">
+                                    <li><i class="bi bi-check"></i> Full Router</li>
+                                    <li><i class="bi bi-check"></i> Gateway</li>
+                                    <li><i class="bi bi-check"></i> Bluetooth</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="service-list">
+                                    <li><i class="bi bi-check"></i> Smart Grid</li>
+                                    <li><i class="bi bi-check"></i> Subscriber</li>
+                                    <li><i class="bi bi-check"></i> Custom Protocols</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <form class="mt-4">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Project Details"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-review-section">
+        <div class="container">
+            <h2 class="section-title center">Customer Reviews</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="testimonial-card text-center">
+                        <p class="review-text">
+                            "We provide a new customer set format. The platform can store customer and service points.
+                            The tool represents our knowledge, belief, and knowledge at specific time. This platform can
+                            deliver online services to us in our own retail outlets, to the best of our knowledge."
+                        </p>
+                        <div class="mt-4">
+                            <div class="review-author">James Wilson</div>
+                            <div class="text-muted">Commercial Client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="section-title">Needs & Events</h3>
+                    <p>We understand our customers' unique needs and provide tailored solutions for various events and
+                        scenarios.</p>
+                    <ul class="service-list mt-4">
+                        <li><i class="bi bi-calendar-event"></i> Scheduled Maintenance Events</li>
+                        <li><i class="bi bi-tools"></i> Emergency Repair Services</li>
+                        <li><i class="bi bi-house"></i> Residential HVAC Solutions</li>
+                        <li><i class="bi bi-building"></i> Commercial System Installations</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="tools-section">
+                        <h4 class="tools-title">Other Tools</h4>
+                        <ul class="service-list">
+                            <li><i class="bi bi-speedometer2"></i> System Performance Monitors</li>
+                            <li><i class="bi bi-clipboard-data"></i> Efficiency Analytics</li>
+                            <li><i class="bi bi-thermometer"></i> Temperature Control Systems</li>
+                            <li><i class="bi bi-shield-check"></i> Safety Compliance Checkers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title center">Latest News</h2>
+
+            <!-- <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-header">
+                            <h4><span class="news-badge">S</span> Tips for Saving Money on Your Heating Bills</h4>
+                        </div>
+                        <div class="news-content">
+                            <p>Customers are able to communicate with consumers all but their own business. They are
+                                able to interact with customers, and they're able to chat about energy-saving solutions
+                                and cost-effective heating options.</p>
+                            <a href="#" class="btn btn-sm btn-primary mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-header">
+                            <h4><span class="news-badge">G</span> Air Conditioning Installation And Maintenance</h4>
+                        </div>
+                        <div class="news-content">
+                            <p>Customers are able to communicate with customers, and they are able to chat about the
+                                latest maintenance techniques and installation best practices for optimal AC
+                                performance.</p>
+                            <a href="#" class="btn btn-sm btn-primary mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-header">
+                            <h4><span class="news-badge">C</span> Building Performance Evaluation & Improvements</h4>
+                        </div>
+                        <div class="news-content">
+                            <p>Customers are able to communicate with customers, and they are able to chat about
+                                performance evaluation and improvement strategies for optimal efficiency in commercial
+                                buildings.</p>
+                            <a href="#" class="btn btn-sm btn-primary mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="divider"></div>
+
+            <!-- Smartphone Solutions Section -->
+            <section class="smartphone-section">
+                <div class="container">
+                    <h2 class="section-title center">Smartphone Solutions</h2>
+                    <p class="text-center mb-5">Control and monitor your HVAC system from anywhere with our innovative
+                        mobile applications</p>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="smartphone-card">
+                                <div class="smartphone-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                                <div class="smartphone-content">
+                                    <h3 class="smartphone-title">Air Supply <span>App</span></h3>
+                                    <p class="smartphone-description">Remote system monitoring and control for your HVAC
+                                        system. Adjust temperature, monitor performance, and receive alerts directly on
+                                        your phone.</p>
+                                    <div class="smartphone-features">
+                                        <ul>
+                                            <li><i class="bi bi-check-circle"></i> Real-time temperature monitoring</li>
+                                            <li><i class="bi bi-check-circle"></i> System status alerts</li>
+                                            <li><i class="bi bi-check-circle"></i> Energy usage tracking</li>
+                                            <li><i class="bi bi-check-circle"></i> Remote control functionality</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="smartphone-card">
+                                <div class="smartphone-icon">
+                                    <i class="bi bi-wifi"></i>
+                                </div>
+                                <div class="smartphone-content">
+                                    <h3 class="smartphone-title">Air Access <span>Portal</span></h3>
+                                    <p class="smartphone-description">Secure access to your HVAC system from any device.
+                                        Manage settings, view history, and control your environment with our web-based
+                                        portal.</p>
+                                    <div class="smartphone-features">
+                                        <ul>
+                                            <li><i class="bi bi-check-circle"></i> Multi-device compatibility</li>
+                                            <li><i class="bi bi-check-circle"></i> Advanced scheduling</li>
+                                            <li><i class="bi bi-check-circle"></i> Usage reports & analytics</li>
+                                            <li><i class="bi bi-check-circle"></i> Secure cloud access</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="smartphone-card">
+                                <div class="smartphone-icon">
+                                    <i class="bi bi-graph-up"></i>
+                                </div>
+                                <div class="smartphone-content">
+                                    <h3 class="smartphone-title">Customers Cost <span>Tracker</span></h3>
+                                    <p class="smartphone-description">Monitor and optimize your energy consumption with
+                                        our cost tracking application. Identify savings opportunities and reduce your
+                                        energy bills.</p>
+                                    <div class="smartphone-features">
+                                        <ul>
+                                            <li><i class="bi bi-check-circle"></i> Energy cost analysis</li>
+                                            <li><i class="bi bi-check-circle"></i> Savings recommendations</li>
+                                            <li><i class="bi bi-check-circle"></i> Budget planning tools</li>
+                                            <li><i class="bi bi-check-circle"></i> Historical usage data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="smartphone-cta">
+                        <a href="#" class="download-btn">
+                            Download Our Apps <i class="bi bi-arrow-down-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Service Section -->
+            <section class="customer-service-section">
+                <div class="container">
+                    <h2 class="section-title center">Customer Service</h2>
+                    <p class="text-center mb-5">We're committed to providing exceptional support for all your HVAC needs
+                    </p>
+
+                    <div class="service-container">
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <h3>Call Support</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>24/7 Emergency Service</h4>
+                                        <p>Immediate assistance for urgent HVAC issues, any time of day or night.</p>
+                                    </div>
+                                </div>
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-headset"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>Technical Support</h4>
+                                        <p>Expert help for system troubleshooting and maintenance questions.</p>
+                                    </div>
+                                </div>
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-calendar-check"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>Appointment Scheduling</h4>
+                                        <p>Book service appointments at your convenience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <ul class="contact-info">
+                                    <li><i class="bi bi-telephone"></i> <a href="tel:383201">Call: 383.201</a></li>
+                                    <li><i class="bi bi-clock"></i> Available 24/7</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <h3>Service Options</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-gear"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>Standard Service</h4>
+                                        <p>Comprehensive maintenance and repair services for residential systems.</p>
+                                    </div>
+                                </div>
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>E2 Service Premium</h4>
+                                        <p>Priority service with extended warranties and dedicated support.</p>
+                                    </div>
+                                </div>
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-building"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>Commercial Services</h4>
+                                        <p>Specialized solutions for business and commercial properties.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <div class="service-hours">
+                                    <h4>Service Hours</h4>
+                                    <p>Mon-Fri: 7:00 AM - 7:00 PM</p>
+                                    <p>Sat: 8:00 AM - 4:00 PM</p>
+                                    <p>Sun: Emergency only</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-card-header">
+                                <h3>Account Management</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>E2, New Leases Change</h4>
+                                        <p>Updated customer service protocols and account management system.</p>
+                                    </div>
+                                </div>
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-credit-card"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>Billing & Payments</h4>
+                                        <p>Manage your account, view bills, and make payments online.</p>
+                                    </div>
+                                </div>
+                                <div class="service-feature">
+                                    <div class="service-icon">
+                                        <i class="bi bi-file-text"></i>
+                                    </div>
+                                    <div class="service-feature-content">
+                                        <h4>Service History</h4>
+                                        <p>Access complete records of all services performed on your system.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <ul class="contact-info">
+                                    <li><i class="bi bi-envelope"></i> <a
+                                            href="mailto:support@hvaccompany.com">support@hvaccompany.com</a></li>
+                                    <li><i class="bi bi-chat"></i> <a href="#">Live Chat Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 footer-col">
+                            <h5>About Us</h5>
+                            <p>We provide top-quality heating, ventilation, and air conditioning solutions for
+                                residential and commercial properties with over 15 years of experience.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-col">
+                            <h5>Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Home</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Services</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-col">
+                            <h5>Our Services</h5>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> HVAC Installation</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Maintenance & Repair</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Air Quality Solutions</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Ductless Systems</a></li>
+                                <li><a href="#"><i class="bi bi-chevron-right"></i> Emergency Services</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-col">
+                            <h5>Contact Info</h5>
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>123 HVAC Street, Mechanical City, MC 12345</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-telephone"></i>
+                                    <span>+1 (555) 123-4567</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-envelope"></i>
+                                    <span>info@airsupply.com</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-clock"></i>
+                                    <span>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 1:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <div class="footer-newsletter">
+                                <h5>Subscribe to Our Newsletter</h5>
+                                <p>Get the latest updates on services, tips, and special offers.</p>
+                                <form class="newsletter-form">
+                                    <input type="email" class="newsletter-input" placeholder="Your email address">
+                                    <button type="submit" class="newsletter-btn"><i class="bi bi-send"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>&copy; 2023 AirSupply HVAC Services. All Rights Reserved.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="payment-methods">
+                                    <i class="bi bi-credit-card" title="Credit Card"></i>
+                                    <i class="bi bi-paypal" title="PayPal"></i>
+                                    <i class="bi bi-currency-bitcoin" title="Bitcoin"></i>
+                                    <i class="bi bi-wallet2" title="Digital Wallet"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Top Button -->
+                <a href="#" class="back-to-top">
+                    <i class="bi bi-arrow-up"></i>
+                </a>
+            </footer>
+
+
+            <!-- Scripts -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                // Simple animation for stats counter
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Add smooth scrolling for navigation links
+                    document.querySelectorAll('a.nav-link').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const targetId = this.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        });
+                    });
+
+                    // Add animation to feature boxes on scroll
+                    const featureBoxes = document.querySelectorAll('.feature-box');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = 1;
+                                entry.target.style.transform = 'translateY(0)';
+                            }
+                        });
+                    }, { threshold: 0.1 });
+
+                    featureBoxes.forEach(box => {
+                        box.style.opacity = 0;
+                        box.style.transform = 'translateY(20px)';
+                        box.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        observer.observe(box);
+                    });
+                });
+            </script>
+
+            <script>
+                // Simple animation for page elements
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Add animation to news cards on scroll
+                    const newsCards = document.querySelectorAll('.news-card');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = 1;
+                                entry.target.style.transform = 'translateY(0)';
+                            }
+                        });
+                    }, { threshold: 0.1 });
+
+                    newsCards.forEach(card => {
+                        card.style.opacity = 0;
+                        card.style.transform = 'translateY(20px)';
+                        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        observer.observe(card);
+                    });
+
+                    // Add hover effect to service list items
+                    const serviceItems = document.querySelectorAll('.service-list li');
+                    serviceItems.forEach(item => {
+                        item.addEventListener('mouseenter', function () {
+                            this.style.transform = 'translateX(5px)';
+                            this.style.transition = 'transform 0.3s ease';
+                        });
+
+                        item.addEventListener('mouseleave', function () {
+                            this.style.transform = 'translateX(0)';
+                        });
+                    });
+                });
+            </script>
+
+            <script>
+                // Back to top button functionality
+                const backToTopButton = document.querySelector('.back-to-top');
+
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+                });
+
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+
+                // Newsletter form validation
+                const newsletterForm = document.querySelector('.newsletter-form');
+
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const emailInput = newsletterForm.querySelector('input[type="email"]');
+
+                    if (emailInput.value && isValidEmail(emailInput.value)) {
+                        alert('Thank you for subscribing to our newsletter!');
+                        emailInput.value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+
+                function isValidEmail(email) {
+                    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return re.test(email);
+                }
+
+                // Animation for footer elements
+                document.addEventListener('DOMContentLoaded', function () {
+                    const footerElements = document.querySelectorAll('.footer-links li, .contact-info li');
+
+                    footerElements.forEach((element, index) => {
+                        element.style.opacity = '0';
+                        element.style.transform = 'translateY(10px)';
+                        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }, 100 + (index * 100));
+                    });
+                });
+            </script>
+</body>
+
+</html>
