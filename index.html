@@ -1127,6 +1127,70 @@
                 /* Reduced padding */
             }
         }
+
+
+        /* WhatsApp Floating Button Styles */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 60px;
+            height: 60px;
+            z-index: 1000;
+        }
+
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-link i {
+            font-size: 28px;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                left: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-link i {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 
@@ -1438,49 +1502,6 @@
         <div class="container">
             <h2 class="section-title center">Latest News</h2>
 
-            <!-- <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="news-card">
-                        <div class="news-header">
-                            <h4><span class="news-badge">S</span> Tips for Saving Money on Your Heating Bills</h4>
-                        </div>
-                        <div class="news-content">
-                            <p>Customers are able to communicate with consumers all but their own business. They are
-                                able to interact with customers, and they're able to chat about energy-saving solutions
-                                and cost-effective heating options.</p>
-                            <a href="#" class="btn btn-sm btn-primary mt-3">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="news-card">
-                        <div class="news-header">
-                            <h4><span class="news-badge">G</span> Air Conditioning Installation And Maintenance</h4>
-                        </div>
-                        <div class="news-content">
-                            <p>Customers are able to communicate with customers, and they are able to chat about the
-                                latest maintenance techniques and installation best practices for optimal AC
-                                performance.</p>
-                            <a href="#" class="btn btn-sm btn-primary mt-3">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="news-card">
-                        <div class="news-header">
-                            <h4><span class="news-badge">C</span> Building Performance Evaluation & Improvements</h4>
-                        </div>
-                        <div class="news-content">
-                            <p>Customers are able to communicate with customers, and they are able to chat about
-                                performance evaluation and improvement strategies for optimal efficiency in commercial
-                                buildings.</p>
-                            <a href="#" class="btn btn-sm btn-primary mt-3">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
 
             <div class="divider"></div>
 
@@ -1799,6 +1820,14 @@
                 <a href="#" class="back-to-top">
                     <i class="bi bi-arrow-up"></i>
                 </a>
+
+                <!-- WhatsApp Floating Button -->
+                <div class="whatsapp-float">
+                    <a href="https://wa.me/9373050127?text=Hi%20AirSupply%2C%20I%20need%20information%20about%20your%20HVAC%20services"
+                        target="_blank" class="whatsapp-link">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
             </footer>
 
 
